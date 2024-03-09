@@ -13,8 +13,9 @@
     "\\src\\cameras",
     "\\src\\core",
     "\\src\\integrators",
-    "\\src\\main"
+    "\\src\\main",
+    "\\src\\tools"
   ],
-  "SelectedNode": "\\CMakeLists.txt",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

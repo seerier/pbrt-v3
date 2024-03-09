@@ -16,10 +16,13 @@ namespace pbrt {
 	//A try to make a simple integrator
 class SimpleIntegrator : public SamplerIntegrator {
   public:
-    SimpleIntegrator(std::shared_ptr<const Camera> camera,
-                             std::shared_ptr<Sampler> sampler,
-                             const Bounds2i &pixelBounds)
-        : SamplerIntegrator(camera, sampler, pixelBounds) {}
+    //SimpleIntegrator(std::shared_ptr<const Camera> camera,
+    //                         std::shared_ptr<Sampler> sampler,
+    //                         const Bounds2i &pixelBounds)
+    //    : SamplerIntegrator(camera, sampler, pixelBounds) {}
+
+    using SamplerIntegrator::SamplerIntegrator; //Inherited Constructor.
+
     Spectrum Li(const RayDifferential &ray, const Scene &scene,
                 Sampler &sampler, MemoryArena &arena,
                 int depth = 0) const override {
