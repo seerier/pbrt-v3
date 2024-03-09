@@ -9,7 +9,11 @@
     "",
     "\\cmake",
     "\\src",
-    "\\src\\integrators"
+    "\\src\\accelerators",
+    "\\src\\cameras",
+    "\\src\\core",
+    "\\src\\integrators",
+    "\\src\\main"
   ],
   "SelectedNode": "\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false

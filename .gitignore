@@ -6,3 +6,4 @@ src/objs
 .git
 .vs
 out
+build
