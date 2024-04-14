@@ -7,15 +7,16 @@
   },
   "ExpandedNodes": [
     "",
-    "\\cmake",
     "\\src",
     "\\src\\accelerators",
     "\\src\\cameras",
     "\\src\\core",
     "\\src\\integrators",
+    "\\src\\lights",
     "\\src\\main",
+    "\\src\\shapes",
     "\\src\\tools"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\src\\core\\integrator.cpp",
   "PreviewInSolutionExplorer": false
 }
