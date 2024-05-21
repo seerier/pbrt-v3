@@ -388,6 +388,7 @@ inline Ray Transform::operator()(const Ray &r, Vector3f *oError,
     if (lengthSquared > 0) {
         Float dt = Dot(Abs(d), *oError) / lengthSquared;
         o += d * dt;
+        //        gxzhao think tMax -= dt; should be added.
         //        tMax -= dt;
     }
     return Ray(o, d, tMax, r.time, r.medium);
