@@ -8,3 +8,5 @@ src/objs
 .vs
 out
 build
+
+CMakeSettings
