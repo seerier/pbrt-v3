@@ -9,4 +9,4 @@ src/objs
 out
 build
 
-CMakeSettings
+CMakeSettings.json
