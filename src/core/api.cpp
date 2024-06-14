@@ -61,8 +61,12 @@
 #include "integrators/volpath.h"
 #include "integrators/whitted.h"
 
-//Simple Integrator
+//Added Integrator
 #include "integrators/simple.h"
+//#include "integrators/normal.h"
+//#include "E:\\Coding\\github repo\\pbrt-v3\\src\\integrators\\normal.h"
+#include "integrators/normal.h"
+#include "integrators/mypath.h"
 
 #include "lights/diffuse.h"
 #include "lights/distant.h"
@@ -1697,6 +1701,10 @@ Integrator *RenderOptions::MakeIntegrator() const {
         integrator = CreateSPPMIntegrator(IntegratorParams, camera);
     } else if (IntegratorName == "simple") {
         integrator = CreateSimpleIntegrator(IntegratorParams, sampler, camera);
+    } else if (IntegratorName == "normal") {
+        integrator = CreateNormalIntegrator(IntegratorParams, sampler, camera);
+    } else if (IntegratorName == "mypath") {
+        integrator = CreateMyPathIntegrator(IntegratorParams, sampler, camera);
     } else {
         Error("Integrator \"%s\" unknown.", IntegratorName.c_str());
         return nullptr;

@@ -7,7 +7,7 @@
 #define PBRT_INTEGRATORS_SIMPLE_H
 
 
-// integrators/whitted.h*
+// integrators/simple.h*
 //#include "pbrt.h"
 #include "integrator.h"
 #include "scene.h"
