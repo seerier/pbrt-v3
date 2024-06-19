@@ -67,6 +67,7 @@
 //#include "E:\\Coding\\github repo\\pbrt-v3\\src\\integrators\\normal.h"
 #include "integrators/normal.h"
 #include "integrators/mypath.h"
+#include "integrators/myvolpath.h"
 
 #include "lights/diffuse.h"
 #include "lights/distant.h"
@@ -1705,16 +1706,18 @@ Integrator *RenderOptions::MakeIntegrator() const {
         integrator = CreateNormalIntegrator(IntegratorParams, sampler, camera);
     } else if (IntegratorName == "mypath") {
         integrator = CreateMyPathIntegrator(IntegratorParams, sampler, camera);
+    } else if (IntegratorName == "myvolpath") {
+        integrator = CreateMyVolPathIntegrator(IntegratorParams, sampler, camera);
     } else {
         Error("Integrator \"%s\" unknown.", IntegratorName.c_str());
         return nullptr;
     }
 
     if (renderOptions->haveScatteringMedia && IntegratorName != "volpath" &&
-        IntegratorName != "bdpt" && IntegratorName != "mlt") {
+        IntegratorName != "bdpt" && IntegratorName != "mlt" && IntegratorName != "myvolpath") {
         Warning(
             "Scene has scattering media but \"%s\" integrator doesn't support "
-            "volume scattering. Consider using \"volpath\", \"bdpt\", or "
+            "volume scattering. Consider using \"volpath\", \"myvolpath\", \"bdpt\", or "
             "\"mlt\".", IntegratorName.c_str());
     }
 
